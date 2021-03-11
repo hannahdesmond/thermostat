@@ -6,6 +6,6 @@ describe('Thermostat', function() {
     thermostat = new Thermostat;
   })
   it('has a default of 20 degrees', function() {
-    expect(thermostat.getCurrentTemperature).toEqual(20);
+    expect(thermostat.getCurrentTemperature()).toEqual(20);
   })
 })
