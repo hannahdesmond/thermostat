@@ -13,7 +13,21 @@ describe('Thermostat', function() {
     expect(thermostat.up()).toEqual(21);
   })
 
-  it('can decrease the temperature', function(){ 
+  it('can decrease the temperature', function(){
     expect(thermostat.down()).toEqual(19);
   })
+
+  it('has a minimum temperture', function(){
+    expect(thermostat.minimumTemperature).toEqual(10);
+  })
+
+  describe('#isMinimumTemperature', function(){
+    it('returns true if temperature is minimum', function(){
+      for (var i = 0; i < 10; i++) {
+        thermostat.down();
+      }
+      expect(thermostat.isMinimumTemperature()).toBe(true)
+    })
+  })
+
 })
