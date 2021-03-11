@@ -15,6 +15,9 @@ class Thermostat {
   }
 
   down() {
+    if(this.isMinimumTemperature()) {
+      return;
+    }
     return this.temperature -= 1
   }
 
