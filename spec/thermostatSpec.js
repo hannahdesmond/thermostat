@@ -30,4 +30,20 @@ describe('Thermostat', function() {
     })
   })
 
+  describe('powerSavingMode is on', function() {
+  
+    it('can be switched off', function() {
+      thermostat.powerSavingModeOff()
+      expect(thermostat.powerSavingMode).toBe(false)
+    })
+  })
+
+  describe('powerSavingMode is off', function() {
+
+    it('can be switched on', function() {
+      thermostat.powerSavingModeOff()
+      expect(thermostat.powerSavingModeOn()).toBe(true)
+    })
+  })
+
 })
