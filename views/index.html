@@ -4,12 +4,23 @@
     <meta charset="utf-8">
     <script src="../src/thermostat.js"></script>
     <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <body>
-<h1>DISPLAY ITEMS</h1>
-<h2>The current temperate is ("20")</h2><br>
-<h2>Power Saving Mode is ("ON")</h2><br>
-<h1>BUTTONS</h1>
+    <a href="http://jquery.com">jQuery</a>
+    <script>
+    $( document ).ready(function() {
+      $( "a" ).click(function( event ) {
+      alert( "As you can see, the link no longer took you to jquery.com" );
+      event.preventDefault();
+  });
+
+})
+    </script>
+    <h1>DISPLAY ITEMS</h1>
+    <h2>The current temperate is ("20")</h2><br>
+    <h2>Power Saving Mode is ("ON")</h2><br>
+    <h1>BUTTONS</h1>
 <form>
   <input type="submit" name="currentUsage" value="Show current usage">
   <input type="submit" name="up" value="Increase temperature">
